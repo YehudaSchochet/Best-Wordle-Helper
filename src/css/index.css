@@ -1,0 +1,74 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h4 {
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  text-align: center;
+}
+
+label {
+  width: 75px;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.element {
+  padding: 10px;
+  margin: auto;
+  width: 33%;
+}
+
+.inputBox {
+  margin: 2px;
+}
+
+.finalWord {
+  color: #6AAA64;  margin: 2px;
+  padding: 2px;
+  border: 1px black solid;
+  border-radius: 5px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.finalWord :hover {
+  text-shadow: 0 0 0.01px black;
+}
+
+#grey {
+  background-color: #787C7E;
+}
+
+#green {
+  background-color: #6AAA64;
+}
+
+#yellow {
+  background-color: #C9B458;
+}
+
+#buttons {
+  text-align: center;
+}
+
+#filteredWords {
+  padding: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#filteredWords::after {
+  content: "";
+  flex: auto;
+}
+

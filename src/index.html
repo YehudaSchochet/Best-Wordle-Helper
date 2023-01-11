@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<title>Wordle Helper</title>
+
+<body>
+  <header>
+    <h1>Wordle Helper</h1>
+  </header>
+  <div class="element" id="grey">
+    <h4>Grey</h4>
+    <div class="explanation"> Type the letters which you know are not to be included:</div>
+    <div class="inputBox">
+      <label>Letters:</label>
+      <input type="text" id="excluded" class="inputs">
+    </div>
+  </div>
+
+  <div class="element" id="green">
+    <h4>Green</h4>
+    <div class="explanation">Type the letters in the spot you know they SHOULD be in:</div>
+    <div class="inputBox">
+      <label>1st Spot:</label>
+      <input type="text" id="firstGreen" class="inputs" maxlength="1">
+    </div>
+    <div class="inputBox">
+      <label>2nd Spot:</label>
+      <input type="text" id="secondGreen" class="inputs" maxlength="1">
+    </div>
+    <div class="inputBox">
+      <label>3rd Spot:</label>
+      <input type="text" id="thirdGreen" class="inputs" maxlength="1">
+    </div>
+    <div class="inputBox">
+      <label>4th Spot:</label>
+      <input type="text" id="fourthGreen" class="inputs" maxlength="1">
+    </div>
+    <div class="inputBox">
+      <label>5th Spot:</label>
+      <input type="text" id="fifthGreen" class="inputs" maxlength="1">
+    </div>
+  </div>
+
+  <div class="element" id="yellow">
+    <h4>Yellow</h4>
+    <div class="explanation">Type the letters in the spots you know they CAN'T be in:</div>
+    <div class="inputBox">
+      <label>1st Spot:</label>
+      <input type="text" id="firstYellow" class="inputs">
+    </div>
+    <div class="inputBox">
+      <label>2nd Spot:</label>
+      <input type="text" id="secondYellow" class="inputs">
+    </div>
+    <div class="inputBox">
+      <label>3rd Spot:</label>
+      <input type="text" id="thirdYellow" class="inputs">
+    </div>
+    <div class="inputBox">
+      <label>4th Spot:</label>
+      <input type="text" id="fourthYellow" class="inputs">
+    </div>
+    <div class="inputBox">
+      <label>5th Spot:</label>
+      <input type="text" id="fifthYellow" class="inputs">
+    </div>
+  </div>
+  <div class="element" id="buttons">
+    <button id="done">Done</button>
+    <button id="clear">Clear</button>
+  </div>
+  <div id="filteredWords"></div>
+</body>
+
+</html>
