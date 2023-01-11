@@ -60,6 +60,7 @@ $('#done').on('click', () => {
 });
 
 $('#clear').on('click', () => {
+  //clear inputs, final word display, and reset wordlist
   words = wordlist.filter(word => word.length === 5);
   $('.inputs').val('');
   filteredWords.empty();
