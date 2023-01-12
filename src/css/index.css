@@ -24,6 +24,10 @@ a {
   color: black;
 }
 
+button{
+    cursor: pointer;
+}
+
 .element {
   padding: 10px;
   margin: auto;
