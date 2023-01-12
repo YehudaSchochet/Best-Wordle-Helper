@@ -4,28 +4,29 @@ import wordlist from 'an-array-of-english-words'
 
 //get list of engish five letter words
 let wordList = wordlist.filter(word => word.length === 5);
+
 let filteredWords = $('#filteredWords')
 
 $('#done').on('click', () => {
   let words=wordList
-  let excludedLetters = $('#excluded').val();
+  let excludedLetters = $('#excluded').val().toLowerCase();
 
   //array of letter in the correct spots
   let greenLetters = [
-    $('#firstGreen').val(),
-    $('#secondGreen').val(),
-    $('#thirdGreen').val(),
-    $('#fourthGreen').val(),
-    $('#fifthGreen').val()
+    $('#firstGreen').val().toLowerCase(),
+    $('#secondGreen').val().toLowerCase(),
+    $('#thirdGreen').val().toLowerCase(),
+    $('#fourthGreen').val().toLowerCase(),
+    $('#fifthGreen').val().toLowerCase()
   ]
 
   //array of letters in incorrect spots
   let yellowSpots = [
-    $('#firstYellow').val(),
-    $('#secondYellow').val(),
-    $('#thirdYellow').val(),
-    $('#fourthYellow').val(),
-    $('#fifthYellow').val()
+    $('#firstYellow').val().toLowerCase(),
+    $('#secondYellow').val().toLowerCase(),
+    $('#thirdYellow').val().toLowerCase(),
+    $('#fourthYellow').val().toLowerCase(),
+    $('#fifthYellow').val().toLowerCase()
   ]
   
   //function to to filter the wordlist via callback passed in
