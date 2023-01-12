@@ -31,8 +31,17 @@ button{
 .element {
   padding: 10px;
   margin: auto;
-  width: 33%;
+  width: 100%;
 }
+
+@media only screen and (min-width: 600px) {
+  .element {
+      padding: 10px;
+      margin: auto;
+      width: 33%;
+    }
+}
+
 
 .inputBox {
   margin: 2px;
