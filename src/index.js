@@ -5,11 +5,13 @@ import wordlist from 'an-array-of-english-words'
 //get list of engish five letter words
 let wordList = wordlist.filter(word => word.length === 5);
 
-let filteredWords = $('#filteredWords')
+let filteredWords = $('#filteredWords');
 
 $('#done').on('click', () => {
-  let words=wordList
-  let excludedLetters = $('#excluded').val().toLowerCase();
+  let words=wordList;
+  //makes the list of excluded letter unique and display the new list in #excluded
+  let excludedLetters =[...new Set($('#excluded').val().toLowerCase())];
+  $('#excluded').val(excludedLetters.join(''))
 
   //array of letter in the correct spots
   let greenLetters = [
@@ -31,26 +33,26 @@ $('#done').on('click', () => {
   
   //function to to filter the wordlist via callback passed in
   function wordlistFilter(callback) {
-    words = words.filter(callback)
+    words = words.filter(callback);
   }
 
   //filter words with excluded letters
   for (let i = 0; i < excludedLetters.length; i++) {
-    wordlistFilter(word => !word.includes(excludedLetters[i]))
+    wordlistFilter(word => !word.includes(excludedLetters[i]));
   }
 
   for (let i = 0; i < 5; i++) {
     //filter words with letter in the correct spot
     const greenLetter = greenLetters[i];
     if (greenLetter !== '') {
-      wordlistFilter(word => word[i].includes(greenLetter))
+      wordlistFilter(word => word[i].includes(greenLetter));
     }
     //filter words with letter in the wrong spot 
     const spot = yellowSpots[i];
     if (spot !== '') {
       for (let j = 0; j < spot.length; j++) {
-        wordlistFilter(word => word.includes(spot[j]))
-        wordlistFilter(word => !word[i].includes(spot[j]))
+        wordlistFilter(word => word.includes(spot[j]));
+        wordlistFilter(word => !word[i].includes(spot[j]));
       }
     }
 
@@ -58,7 +60,7 @@ $('#done').on('click', () => {
   filteredWords.empty();
   words.forEach(word=>{
     $(`<div class="finalWord"> <a href="https://en.wiktionary.org/wiki/${word}" target="_blank"> ${word}</a> </div> `).appendTo(filteredWords)
-  })
+  });
 });
 
 $('#clear').on('click', () => {
