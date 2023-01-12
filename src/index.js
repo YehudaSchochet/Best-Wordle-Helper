@@ -3,10 +3,11 @@ import $ from 'jquery';
 import wordlist from 'an-array-of-english-words'
 
 //get list of engish five letter words
-let words = wordlist.filter(word => word.length === 5);
+let wordList = wordlist.filter(word => word.length === 5);
 let filteredWords = $('#filteredWords')
 
 $('#done').on('click', () => {
+  let words=wordList
   let excludedLetters = $('#excluded').val();
 
   //array of letter in the correct spots
@@ -61,7 +62,6 @@ $('#done').on('click', () => {
 
 $('#clear').on('click', () => {
   //clear inputs, final word display, and reset wordlist
-  words = wordlist.filter(word => word.length === 5);
   $('.inputs').val('');
   filteredWords.empty();
 })
