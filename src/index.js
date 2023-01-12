@@ -5,9 +5,7 @@ import wordlist from 'an-array-of-english-words'
 //get list of engish five letter words
 let words = wordlist.filter(word => word.length === 5);
 let filteredWords = $('#filteredWords')
-$(window).on('load', function () {
-  $("#cover").hide();
-});
+
 $('#done').on('click', () => {
   let excludedLetters = $('#excluded').val();
 
