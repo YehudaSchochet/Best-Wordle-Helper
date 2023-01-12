@@ -15,7 +15,10 @@ label {
   width: 75px;
   display: inline-block;
 }
-
+input{
+  width:50%;
+  box-sizing: border-box;
+}
 a {
   text-decoration: none;
   color: black;
